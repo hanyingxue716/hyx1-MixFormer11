@@ -1,39 +1,4 @@
-# BRI-MixFormer: Boundary Iterative Hybrid Network for Intraoperative Nerve Segmentation in PELD
-## Project Introduction
-<div align="center">
-  <img src="./model_architecture.png" height="400">
-</div>
-<p align="center">
-  Overall architecture of the proposed BRI-MixFormer.
-</p>
-<div align="center">
-  <img src="./GIQR.png" height="400">
-</div>
-<p align="center">
-  Detailed architecture of the proposed GIQR block. 
-</p>
 
-
-
-This implementation is improved based on the lightweight CNN-Transformer hybrid segmentation framework [U-MixFormer](https://github.com/julian-klitzing/u-mixformer), targeting pixel-level segmentation of fully exposed nerve roots during Percutaneous Endoscopic Lumbar Discectomy (PELD).
-
-Traditional endoscopic segmentation models suffer from encoder-biased design, poor extraction of faint nerve features, severe contour distortion, and weak robustness against intraoperative occlusion. We propose two core innovations:
-1. **GIQR (Global Iterative Query Refinement) Module**: Multi-scale confidence mask filters background noise from surgical instruments and adipose tissue; cross-layer feature back-propagation iteratively repairs broken slender nerve edges.
-2. **IRB (Iterative Region Boundary Loss)**: Combines Dice-Focal region loss and Sobel gradient edge loss to jointly optimize region integrity and contour precision.
-
-The model maintains lightweight parameters and real-time inference speed for intraoperative navigation. It achieves state-of-the-art metrics on our self-built clinical PELD dataset, and strong cross-domain generalization is validated on five public gastrointestinal polyp datasets.
-<div align="center">
-  <img src="./qualitative.png" height="400">
-</div>
-<p align="center">
-  Visualization of qualitative segmentation results under instrument occlusion and low-contrast surgical fields by different methods.
-</p>
-<div align="center">
-  <img src="./visual_comparison.png" height="400">
-</div>
-<p align="center">
- Heatmap visualization of the GIQR module.
-</p>
 
 ## Verified Environment Versions
 We build the project based on [MMSegmentation v1.0.0](https://github.com/open-mmlab/mmsegmentation/tree/v1.0.0).
