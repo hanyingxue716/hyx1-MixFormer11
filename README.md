@@ -38,7 +38,7 @@ BRI-MixFormer-main/
 ├── datasets/                # Custom dataset & augmentation pipeline
 ├── demo/                    # Single-image inference visualization
 ├── docs/                    # Paper figures & experimental records
-├── mmseg/models/decode_heads/ # Core BRI-MixFormer decoder (modified from U-MixFormer)
+├── mmseg/models/decode_heads/ # Core decoder 
 ├── pretrain/                # MiT lightweight backbone weights
 ├── projects/                # All training & ablation config files
 ├── resources/               # Segmentation comparison & heatmap figures
